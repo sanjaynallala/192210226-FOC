@@ -1,0 +1,4 @@
+echo "Enter a number:"
+read number 
+cube=$((number * number * number))
+echo "The cube of $number is $cube"

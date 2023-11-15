@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int N, sum = 0;
+
+    // Input the value of 'N'
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+
+    // Calculate the sum of the series
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 0) {
+            // If 'i' is even, subtract it from the sum
+            sum -= i;
+        } else {
+            // If 'i' is odd, add it to the sum
+            sum += i;
+        }
+    }
+
+    // Display the result
+    printf("Sum of the series up to %d is: %d\n", N, sum);
+
+    return 0;
+}

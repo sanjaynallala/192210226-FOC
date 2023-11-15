@@ -1,0 +1,32 @@
+echo "Choose a shape to calculate the area:"
+echo "1. Square"
+echo "2. Rectangle"
+echo "3. Circle"
+echo "4. Quit"
+
+read choice
+
+case $choice in
+  1)
+    echo "Enter the side length of the square:"
+    read side
+    area=$(echo "scale=2; $side * $side" | bc)
+    echo "Area of the square: $area square units";;
+  2)
+    echo "Enter the length of the rectangle:"
+    read length
+    echo "Enter the width of the rectangle:"
+    read width
+    area=$(echo "scale=2; $length * $width" | bc)
+    echo "Area of the rectangle: $area square units";;
+  3)
+    echo "Enter the radius of the circle:"
+    read radius
+    area=$(echo "scale=2; 3.14 * $radius * $radius" | bc)
+    echo "Area of the circle: $area square units";;
+  4)
+    echo "Exiting the program."
+    exit;;
+  *)
+    echo "Invalid choice. Please choose a number between 1 and 4.";;
+esac
